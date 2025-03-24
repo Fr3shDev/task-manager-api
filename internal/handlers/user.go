@@ -48,7 +48,7 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 // LoginHandler handles user login requests.
 // It expects a POST request with a JSON body containing username and password.
 
-func LoginHandler(w http.ResponseWriter, r http.Request) {
+func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	// Only accepts post requests
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
